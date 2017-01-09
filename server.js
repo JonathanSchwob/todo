@@ -6,5 +6,8 @@ var example = 'send me back to the client';
 
 app.use(express.static(__dirname));
 
-app.listen(4000, console.log('bro'));
+app.get('/todo', function(req, res) {
+  res.send(example);
+});
 
+app.listen(4000, console.log('bro'));

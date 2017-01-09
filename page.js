@@ -2,8 +2,7 @@ angular.module('pageModule', [])
 
 
 .controller('pageController', function($scope, $http) {
-  // $scope.exampleText = 'wtfs';
-  $http.get('server.js')
+  $http.get('/todo')
   .then(function (response) {
     $scope.httpRequest = response.data;
   });
